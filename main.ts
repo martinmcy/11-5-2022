@@ -1,19 +1,16 @@
 input.onButtonPressed(Button.A, function () {
-    scoremaker = 1
-    radio.sendNumber(scoremaker)
+    score += 1
+    radio.sendNumber(score)
 })
 input.onButtonPressed(Button.AB, function () {
-    scoremaker = 0
-    radio.sendNumber(scoremaker)
+    score += 0
+    radio.sendNumber(score)
 })
 input.onButtonPressed(Button.B, function () {
-    scoremaker = -1
-    radio.sendNumber(scoremaker)
+    score += -1
+    radio.sendNumber(score)
 })
-let scoremaker = 0
-radio.setGroup(0)
-scoremaker = 0
-basic.showNumber(scoremaker)
-basic.forever(function () {
-	
-})
+let score = 0
+radio.setGroup(84)
+score = 0
+basic.showNumber(score)
